@@ -135,6 +135,8 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   line-height: 1.03;
   letter-spacing: -0.045em;
+  padding-bottom: .14em; /* evita cortar descendentes (g, p, q) no background-clip */
+  margin-bottom: -.14em;
   background: linear-gradient(180deg, #fff 30%, #9a9a9a);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
