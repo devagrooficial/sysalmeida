@@ -229,14 +229,13 @@ a { color: inherit; text-decoration: none; }
 .marquee__track { display: flex; width: max-content; animation: scroll 32s linear infinite; }
 .marquee:hover .marquee__track { animation-play-state: paused; }
 .marquee__group { display: flex; list-style: none; margin: 0; padding: 0; }
-.marquee__group li { padding: 0 38px; }
-.marquee__group svg {
-  height: 30px; width: auto; display: block;
-  font-family: var(--font);
-  color: #fff; opacity: .28; filter: grayscale(1);
-  transition: opacity .3s ease, color .3s ease, filter .3s ease;
+.marquee__group li { padding: 0 44px; display: flex; align-items: center; }
+.marquee__group img {
+  height: 34px; width: auto; max-width: none; display: block;
+  opacity: .32;
+  transition: opacity .3s ease, filter .3s ease, transform .3s ease;
 }
-.marquee__group li:hover svg { opacity: 1; color: var(--accent); filter: drop-shadow(0 0 10px rgba(16, 229, 160, .5)); }
+.marquee__group li:hover img { opacity: 1; filter: drop-shadow(0 0 12px rgba(16, 229, 160, .55)); transform: scale(1.04); }
 
 /* ---------- Animations ---------- */
 .reveal { opacity: 0; transform: translateY(24px); animation: rise .9s cubic-bezier(.2, .7, .2, 1) forwards; animation-delay: var(--d, 0ms); }
