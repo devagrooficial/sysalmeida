@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SyS Almeida — Engenharia de software de alto nível</title>
+  <meta name="description" content="De aplicativos mobile a automações inteligentes com I.A. Soluções escaláveis, seguras e de alta performance.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" type="image/png" href="images/lofoFavicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo" aria-label="SyS Almeida">
+        <img src="images/logo.png" alt="SyS Almeida" width="463" height="93">
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#sobre">Empresa</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a href="https://wa.me/5565998007684?text=Ol%C3%A1!%20me%20chamo:%20" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Iniciar Meu Projeto</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--top" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <span class="badge reveal" style="--d:0ms">
+          <span class="badge__dot"></span> Engenharia de software · Mobile · I.A.
+        </span>
+        <h1 class="hero__title reveal" style="--d:100ms">
+          Engenharia de <span class="metal">software</span> que impulsiona o seu negócio.
+        </h1>
+        <p class="hero__sub reveal" style="--d:200ms">
+          De aplicativos mobile a automações inteligentes com I.A. Transformamos complexidade em soluções escaláveis, seguras e de alta performance.
+        </p>
+        <div class="hero__actions reveal" style="--d:300ms">
+          <a href="https://wa.me/5565998007684?text=Ol%C3%A1!%20me%20chamo:%20" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Solicitar Proposta</a>
+          <a href="#portfolio" class="btn btn--outline btn--lg">
+            Ver Casos de Sucesso
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dashboard mockup -->
+      <div class="container hero__visual reveal" style="--d:450ms">
+        <div class="hero__glow hero__glow--bottom" aria-hidden="true"></div>
+        <div class="mock" id="mock">
+          <div class="mock__frame">
+            <div class="mock__bar">
+              <span></span><span></span><span></span>
+              <em>sysalmeida.app / dashboard</em>
+            </div>
+            <div class="mock__body">
+              <aside class="mock__side">
+                <i class="on"></i><i></i><i></i><i></i><i></i>
+              </aside>
+              <div class="mock__main">
+                <div class="mock__kpis">
+                  <div class="kpi"><small>Uptime</small><b>99.99%</b><span class="up">▲ SLA</span></div>
+                  <div class="kpi"><small>Latência p95</small><b>38ms</b><span class="up">▼ 42%</span></div>
+                  <div class="kpi"><small>Requisições/s</small><b>12.4k</b><span class="up">▲ 18%</span></div>
+                </div>
+                <div class="mock__chart">
+                  <svg viewBox="0 0 600 180" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#10E5A0" stop-opacity=".35"/>
+                        <stop offset="1" stop-color="#10E5A0" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0 150 C60 140 90 120 140 124 S220 80 280 90 S380 40 440 55 S540 20 600 14 V180 H0Z" fill="url(#area)"/>
+                    <path class="line" d="M0 150 C60 140 90 120 140 124 S220 80 280 90 S380 40 440 55 S540 20 600 14" fill="none" stroke="#10E5A0" stroke-width="2.5"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float float--code">
+<pre><span class="c">// deploy.ts</span>
+<span class="k">await</span> <span class="f">pipeline</span>.<span class="f">run</span>({
+  env: <span class="s">"production"</span>,
+  ai: <span class="k">true</span>,
+  scale: <span class="s">"auto"</span>
+});
+<span class="ok">✓ build 24s · 0 erros</span></pre>
+          </div>
+
+          <div class="float float--ai">
+            <div class="float__ico">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.7 1.8L21.5 17.5l-1.8.7L19 20l-.7-1.8-1.8-.7 1.8-.7z"/></svg>
+            </div>
+            <div><b>Agente I.A.</b><small>1.284 tarefas automatizadas</small></div>
+          </div>
+
+          <div class="float float--mobile">
+            <div class="phone"><i></i><i></i><i class="w"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="proof" aria-labelledby="proof-title">
+      <p class="proof__title" id="proof-title">Empresas que escalam com a SyS Almeida</p>
+      <div class="marquee">
+        <div class="marquee__track">
+          <!-- grupo 1 -->
+          <ul class="marquee__group">
+            <li><svg viewBox="0 0 140 32"><circle cx="14" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="3"/><text x="32" y="22" font-size="18" font-weight="800">Nexora</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><path d="M4 26L14 6l10 20z" fill="currentColor"/><text x="32" y="22" font-size="18" font-weight="700">Vertice</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><rect x="4" y="7" width="18" height="18" rx="5" fill="currentColor"/><text x="30" y="22" font-size="18" font-weight="800">Quantum</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><path d="M4 16h8l4-9 6 18 4-9h8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="44" y="22" font-size="18" font-weight="700">Pulse</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><circle cx="10" cy="16" r="6" fill="currentColor"/><circle cx="22" cy="16" r="6" fill="currentColor" opacity=".5"/><text x="36" y="22" font-size="18" font-weight="800">Orbita</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><path d="M6 6h18v6H12v14H6z" fill="currentColor"/><text x="32" y="22" font-size="18" font-weight="700">Forge</text></svg></li>
+          </ul>
+          <!-- grupo 2 (duplicado p/ loop infinito) -->
+          <ul class="marquee__group" aria-hidden="true">
+            <li><svg viewBox="0 0 140 32"><circle cx="14" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="3"/><text x="32" y="22" font-size="18" font-weight="800">Nexora</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><path d="M4 26L14 6l10 20z" fill="currentColor"/><text x="32" y="22" font-size="18" font-weight="700">Vertice</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><rect x="4" y="7" width="18" height="18" rx="5" fill="currentColor"/><text x="30" y="22" font-size="18" font-weight="800">Quantum</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><path d="M4 16h8l4-9 6 18 4-9h8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="44" y="22" font-size="18" font-weight="700">Pulse</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><circle cx="10" cy="16" r="6" fill="currentColor"/><circle cx="22" cy="16" r="6" fill="currentColor" opacity=".5"/><text x="36" y="22" font-size="18" font-weight="800">Orbita</text></svg></li>
+            <li><svg viewBox="0 0 140 32"><path d="M6 6h18v6H12v14H6z" fill="currentColor"/><text x="32" y="22" font-size="18" font-weight="700">Forge</text></svg></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMPRESA -->
+    <section class="section about" id="sobre">
+      <div class="container about__grid">
+        <div class="about__text">
+          <span class="tag tag--green reveal-s">Nossa Missão</span>
+          <h2 class="h2 reveal-s" style="--d:80ms">Não escrevemos apenas código. <span class="dim">Construímos negócios escaláveis.</span></h2>
+          <p class="lead reveal-s" style="--d:160ms">Nascemos da paixão por resolver problemas reais. Combinamos arquitetura de software de ponta, infraestrutura em nuvem e design impecável para entregar plataformas web, aplicativos mobile e automações que eliminam gargalos e aceleram o seu crescimento.</p>
+          <div class="stats reveal-s" style="--d:240ms">
+            <div class="stat"><b>100%</b><span>Projetos Entregues</span></div>
+            <div class="stat"><b>Stack</b><span>Moderna</span></div>
+            <div class="stat"><b>Alta</b><span>Performance</span></div>
+            <div class="stat"><b>Cloud</b><span>Nativa e Segura</span></div>
+          </div>
+        </div>
+        <div class="about__visual reveal-s" style="--d:200ms" aria-hidden="true">
+          <div class="about__glow"></div>
+          <canvas id="mesh"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <header class="section__head reveal-s">
+          <span class="tag">Serviços</span>
+          <h2 class="h2">Tudo que o seu produto precisa, <span class="dim">sob o mesmo teto.</span></h2>
+        </header>
+
+        <div class="bento">
+          <article class="card card--wide spot reveal-s">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+            <h3>Desenvolvimento Mobile &amp; Web</h3>
+            <p>Aplicativos fluidos e plataformas robustas construídos com as melhores tecnologias (Python, Node.js, React, bancos de dados em tempo real). Da ideia às lojas de aplicativos.</p>
+            <ul class="chips"><li>Python</li><li>Node.js</li><li>React</li><li>Tempo real</li></ul>
+            <div class="card__art card__art--phone" aria-hidden="true">
+              <div class="phone phone--lg"><i></i><i></i><i class="w"></i><i></i></div>
+            </div>
+          </article>
+
+          <article class="card spot reveal-s" style="--d:80ms">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.7 1.8 1.8.7-1.8.7L19 20l-.7-1.8-1.8-.7 1.8-.7z"/></svg></div>
+            <h3>Automação Inteligente &amp; I.A.</h3>
+            <p>Integrações via API, fluxos automatizados e IA para reduzir o custo operacional e aumentar sua velocidade.</p>
+          </article>
+
+          <article class="card spot reveal-s" style="--d:120ms">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.5 12 3.5 3.5 0 0 0 6 19z"/></svg></div>
+            <h3>Arquitetura &amp; Cloud</h3>
+            <p>Hospedagem, banco de dados escalável e deploys seguros para que sua aplicação nunca saia do ar.</p>
+          </article>
+
+          <article class="card card--wide spot reveal-s" style="--d:160ms">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <h3>Soluções Institucionais e Ferramentas</h3>
+            <p>Desenvolvemos desde landing pages de altíssima conversão até painéis administrativos complexos sob medida.</p>
+            <div class="card__art card__art--panel" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <header class="section__head reveal-s">
+          <span class="tag">Portfólio</span>
+          <h2 class="h2">Resultados que <span class="dim">falam por si.</span></h2>
+        </header>
+
+        <div class="cases">
+          <a href="#contato" class="case reveal-s">
+            <div class="case__media">
+              <div class="case__img case__img--dash">
+                <div class="dash"><b></b><b></b><b></b><span></span></div>
+              </div>
+            </div>
+            <div class="case__body">
+              <div class="case__tags"><span>SaaS</span><span>Automação</span><span>Financeiro</span></div>
+              <h3>Fluxo Assertivo: Plataforma de Gestão</h3>
+              <div class="case__metric"><b>-40%</b><span>de custo operacional</span></div>
+              <span class="case__link">Ver o caso completo <i>↗</i></span>
+            </div>
+          </a>
+
+          <a href="#contato" class="case reveal-s" style="--d:100ms">
+            <div class="case__media">
+              <div class="case__img case__img--app">
+                <div class="phone phone--lg"><i></i><i></i><i class="w"></i><i></i></div>
+              </div>
+            </div>
+            <div class="case__body">
+              <div class="case__tags"><span>App Mobile</span><span>Logística</span><span>Conformidade</span></div>
+              <h3>App de Transporte e Conformidade</h3>
+              <div class="case__metric"><b>100%</b><span>de automação de processos</span></div>
+              <span class="case__link">Ver o caso completo <i>↗</i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section contact" id="contato">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__head section__head--center reveal-s">
+          <h2 class="h2">Pronto para transformar sua ideia em <span class="dim">software real?</span></h2>
+          <p class="lead">Fale diretamente com nossa equipe técnica. Vamos entender seu desafio e desenhar a melhor arquitetura para o seu negócio.</p>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__quick reveal-s">
+            <a href="https://wa.me/5565998007684?text=Ol%C3%A1!%20me%20chamo:%20" class="btn btn--primary btn--xl" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.2 16.8L2 22l5.4-1.4A11 11 0 1 0 20.5 3.5zM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-3.2.8.9-3.1-.2-.3A9 9 0 1 1 12 20zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a7.400 7.400 0 0 1-3.700-3.200c-.3-.5.3-.5.8-1.500.1-.2 0-.4 0-.5l-.9-2c-.2-.5-.4-.4-.7-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.200 5.200 5.200 0 0 0 1.100 2.800 11.900 11.900 0 0 0 4.600 4c1.700.7 2.400.8 3.200.7a2.700 2.700 0 0 0 1.800-1.300 2.200 2.200 0 0 0 .2-1.300c-.1-.1-.3-.2-.6-.3z"/></svg>
+              Falar no WhatsApp agora
+            </a>
+            <p class="muted-sm">Resposta rápida em horário comercial.</p>
+
+            <ul class="contact__info">
+              <li><span>E-mail</span><a href="mailto:contato@sysalmeida.com.br">contato@sysalmeida.com.br</a></li>
+              <li><span>Redes</span>
+                <div class="socials">
+                  <a href="https://www.instagram.com/sysalmeida/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+                  <a href="https://medium.com/@sysalmeida.dev" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="5"/><ellipse cx="17" cy="12" rx="2" ry="5"/><path d="M22 7v10"/></svg></a>
+                  <a href="https://www.youtube.com/@SysAlmeida" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22 8.5a3 3 0 0 0-2.1-2.1C18 6 12 6 12 6s-6 0-7.900.4A3 3 0 0 0 2 8.500 31 31 0 0 0 1.600 12 31 31 0 0 0 2 15.500a3 3 0 0 0 2.100 2.100C6 18 12 18 12 18s6 0 7.900-.4a3 3 0 0 0 2.100-2.100 31 31 0 0 0 .4-3.500 31 31 0 0 0-.4-3.500z"/><path d="M10 9l5 3-5 3z"/></svg></a>
+                  <a href="https://x.com/sysAlmeida" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="footer__logo" aria-label="SyS Almeida"><img src="images/logo.png" alt="SyS Almeida" width="463" height="93"></a>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="#sobre">Empresa</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <p>Copyright © 2026 SyS Almeida</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
