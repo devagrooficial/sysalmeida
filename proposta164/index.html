@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proposta 164 — Plataforma de Gestão de Documentos de Projeto | SyS Almeida</title>
+  <meta name="description" content="Proposta comercial nº 164: plataforma de gestão de documentos de projeto com GRD, revisões e fluxo de aprovação.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Proposta 164 — Plataforma de Gestão de Documentos de Projeto">
+  <meta property="og:description" content="Plataforma própria com GRD, revisões e fluxo de aprovação. Em uso em 15 dias, completa em 90.">
+  <meta property="og:image" content="https://sysalmeida.com.br/proposta164/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://sysalmeida.com.br/proposta164">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/images/lofoFavicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/proposta164/proposta.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top__row">
+    <a class="top__logo" href="/" aria-label="SyS Almeida"><img src="/images/logo.png" alt="SyS Almeida" width="463" height="93"></a>
+    <div class="top__meta">
+      <span class="top__num">Proposta nº <span data-v="numero"></span></span>
+      <button type="button" class="btn btn--ghost" id="pdf">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+        Baixar PDF
+      </button>
+    </div>
+  </div>
+  <nav class="tabs" role="tablist" aria-label="Etapas da proposta" id="tabs"></nav>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+</header>
+
+<main id="main">
+
+<!-- 1 APRESENTAÇÃO -->
+<section class="panel" id="p-apresentacao" role="tabpanel" data-title="Apresentação">
+  <div class="cover">
+    <div class="eyebrow">Proposta Comercial nº <span data-v="numero"></span></div>
+    <h1>Plataforma de Gestão de Documentos de Projeto <span class="g">com GRD</span></h1>
+    <dl class="cover__meta">
+      <div><dt>Cliente</dt><dd><mark class="ph" data-v="cliente"></mark></dd></div>
+      <div><dt>Referência</dt><dd data-v="referencia"></dd></div>
+      <div><dt>Emissão</dt><dd data-v="dataEmissao"></dd></div>
+      <div><dt>Validade</dt><dd><span data-v="dataValidade"></span> <small>(<span data-v="validadeDias"></span> dias)</small></dd></div>
+    </dl>
+  </div>
+
+  <p class="lead">Uma <strong>plataforma própria</strong>, feita para o fluxo de documentos de engenharia: <strong>em uso em 15 dias</strong>, liberada oficialmente no <strong>dia 30</strong> e <strong>completa em 90 dias</strong>.</p>
+
+  <div class="stats">
+    <div class="stat"><b>15</b><span>dias para começar a usar</span></div>
+    <div class="stat"><b>30</b><span>dias para a liberação oficial</span></div>
+    <div class="stat"><b>90</b><span>dias até a versão completa</span></div>
+    <div class="stat"><b>100</b><span>usuários, incluindo a equipe da Energisa</span></div>
+  </div>
+
+  <h2>Duas formas de contratar</h2>
+  <div class="mini">
+    <a class="mini__card" href="#investimento" data-go="investimento">
+      <span class="tag">Opção 1</span><h3>Compra da plataforma</h3>
+      <p>Direito de uso perpétuo, instalação exclusiva. Ativo da empresa para todos os próximos contratos.</p>
+      <b data-v="compra.total12"></b><small>em 12 meses</small>
+    </a>
+    <a class="mini__card" href="#investimento" data-go="investimento">
+      <span class="tag">Opção 2</span><h3>Licença de uso</h3>
+      <p>Menor aporte inicial e mensalidade fixa por empresa, com até 100 usuários. Cliente fundador.</p>
+      <b data-v="licenca.total12"></b><small>em 12 meses</small>
+    </a>
+  </div>
+</section>
+
+<!-- 2 DESAFIO -->
+<section class="panel" id="p-desafio" role="tabpanel" data-title="O desafio">
+  <div class="eyebrow">O desafio</div>
+  <h2 class="big">O projeto só anda quando o documento certo chega à pessoa certa.</h2>
+  <p class="lead">O edital exige uma plataforma para o fluxo de documentos e desenhos do projeto, acessível a todos os envolvidos.</p>
+
+  <h3>Na prática, a plataforma precisa permitir:</h3>
+  <ul class="checks">
+    <li>Inserir, revisar e baixar documentos</li>
+    <li>Emitir <strong>GRD</strong> (Guia de Remessa de Documentos)</li>
+    <li>Registrar atas de reunião</li>
+    <li>Deixar a equipe da <strong>Energisa</strong> analisar e aprovar</li>
+  </ul>
+
+  <h3>O que dá errado sem isso</h3>
+  <div class="grid4">
+    <div class="risk"><i>!</i><b>Revisão errada na obra</b><span>Um documento superado chega ao canteiro e vira retrabalho ou acidente.</span></div>
+    <div class="risk"><i>!</i><b>GRD perdida em e-mail</b><span>Sem protocolo, ninguém prova o que foi enviado, quando e a quem.</span></div>
+    <div class="risk"><i>!</i><b>Prazo sem controle</b><span>A análise passa do limite e ninguém é avisado.</span></div>
+    <div class="risk"><i>!</i><b>Nenhum histórico</b><span>Na auditoria, não há como reconstruir quem aprovou o quê.</span></div>
+  </div>
+
+  <p class="callout">A SyS Almeida entrega essa plataforma pronta para a concorrência, com o fluxo que a Energisa espera ver.</p>
+</section>
+
+<!-- 3 SOLUÇÃO -->
+<section class="panel" id="p-solucao" role="tabpanel" data-title="A solução">
+  <div class="eyebrow">A solução</div>
+  <h2 class="big">Cada documento com dono, código, revisão, status e histórico.</h2>
+  <p class="lead">Um ambiente único e seguro, onde nada se perde e tudo pode ser rastreado.</p>
+
+  <h3>O fluxo do documento</h3>
+  <div class="flow" role="img" aria-label="Fluxo: elabora documento, emite GRD para aprovação, análise Energisa. Se aprovado, emite para construção e As Built. Se com comentários ou reprovado, responde os comentários, sobe a revisão e emite nova GRD.">
+    <svg viewBox="0 0 1060 440" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, sans-serif">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#10e5a0"/></marker>
+        <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ff8a6b"/></marker>
+      </defs>
+      <g class="n"><rect x="10" y="170" width="170" height="80" rx="12"/><text x="95" y="205" text-anchor="middle">Elabora</text><text x="95" y="228" text-anchor="middle">documento</text></g>
+      <g class="n"><rect x="250" y="170" width="170" height="80" rx="12"/><text x="335" y="205" text-anchor="middle">Emite GRD</text><text x="335" y="228" text-anchor="middle" class="s">Para Aprovação</text></g>
+      <g class="n hl"><rect x="490" y="170" width="170" height="80" rx="12"/><text x="575" y="205" text-anchor="middle">Análise</text><text x="575" y="228" text-anchor="middle">Energisa</text></g>
+      <g class="n"><rect x="750" y="40" width="190" height="80" rx="12"/><text x="845" y="75" text-anchor="middle">Emite para</text><text x="845" y="98" text-anchor="middle">construção</text></g>
+      <g class="n ok"><rect x="750" y="150" width="190" height="60" rx="12"/><text x="845" y="187" text-anchor="middle">As Built</text></g>
+      <g class="n warn"><rect x="750" y="300" width="250" height="90" rx="12"/><text x="875" y="333" text-anchor="middle">Responde comentários</text><text x="875" y="358" text-anchor="middle" class="s">e sobe a revisão (A, B, C…)</text></g>
+      <path d="M180 210H248" class="e" marker-end="url(#ar)"/>
+      <path d="M420 210H488" class="e" marker-end="url(#ar)"/>
+      <path d="M660 195C700 195 700 80 748 80" class="e" marker-end="url(#ar)"/>
+      <path d="M845 120V148" class="e" marker-end="url(#ar)"/>
+      <path d="M660 225C700 225 700 345 748 345" class="e w" marker-end="url(#ar2)"/>
+      <path d="M750 360H335V252" class="e w" marker-end="url(#ar2)" stroke-dasharray="6 6"/>
+      <text x="705" y="130" class="lbl g1">Aprovado</text>
+      <text x="705" y="300" class="lbl g2">Com comentários / reprovado</text>
+      <text x="450" y="385" class="lbl g2">nova GRD</text>
+    </svg>
+  </div>
+
+  <h3>Perfis de acesso</h3>
+  <div class="roles">
+    <span>Administrador</span><span>Coordenação</span><span>Projetista (por disciplina)</span><span>Subcontratada</span><span class="on">Energisa · analisa, comenta e aprova, sem custo extra por usuário</span>
+  </div>
+</section>
+
+<!-- 4 FUNCIONALIDADES -->
+<section class="panel" id="p-funcionalidades" role="tabpanel" data-title="Funcionalidades">
+  <div class="eyebrow">Funcionalidades</div>
+  <h2 class="big">13 módulos, entregues em etapas de 15 dias.</h2>
+  <div class="tablewrap">
+    <table class="tbl" id="tbl-func">
+      <thead><tr><th>#</th><th>Módulo</th><th>O que faz</th><th>Entrega</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="box">
+    <h3>Dimensionado para o seu projeto</h3>
+    <p class="muted">Estimativa feita para cima, a partir da norma de subestações da própria Energisa (NDU 048.1, que lista 48 tipos de documento em 6 disciplinas).</p>
+    <div class="grid3" id="dim"></div>
+  </div>
+</section>
+
+<!-- 5 TECNOLOGIA -->
+<section class="panel" id="p-tecnologia" role="tabpanel" data-title="Tecnologia e segurança">
+  <div class="eyebrow">Tecnologia e segurança</div>
+  <h2 class="big">Tecnologia moderna, dados no Brasil e rastreabilidade total.</h2>
+
+  <div class="cols2">
+    <div class="card"><h3>Stack</h3><p><strong>Node.js</strong> no back-end, <strong>React</strong> no front-end e banco <strong>PostgreSQL</strong>. Tecnologias modernas e muito usadas no mercado, sem licença de terceiros.</p></div>
+    <div class="card"><h3>Infraestrutura</h3><p>VPS <strong>dedicada e própria, hospedada no Brasil</strong>. Os dados não saem do país, o que facilita a LGPD e deixa o sistema rápido para quem acessa daqui. Custo fixo em real.</p></div>
+  </div>
+
+  <h3>Segurança</h3>
+  <ul class="checks cols">
+    <li>HTTPS em todo o acesso</li>
+    <li>Autenticação em dois fatores</li>
+    <li>Senhas criptografadas</li>
+    <li>Backup diário automático, com cópia fora do servidor</li>
+    <li>Permissões por perfil e por empresa</li>
+    <li>Registro de toda ação (trilha de auditoria)</li>
+    <li>Monitoramento 24 h</li>
+  </ul>
+
+  <h3>Boas práticas de gestão documental</h3>
+  <div class="cols2">
+    <div class="card"><h4>ISO 9001</h4><p>Controle de informação documentada: identificação, revisão, aprovação, distribuição e bloqueio de versão obsoleta.</p></div>
+    <div class="card"><h4>ISO 19650</h4><p>Ambiente comum de dados: em elaboração → compartilhado → publicado → arquivado.</p></div>
+  </div>
+  <p class="muted small">O fluxo é alinhado às boas práticas dessas normas. A plataforma não é, por si só, uma certificação.</p>
+
+  <h3>LGPD</h3>
+  <p>Termo de uso, registro de acesso e tratamento de dados pessoais apenas para operar a plataforma.</p>
+</section>
+
+<!-- 6 CRONOGRAMA -->
+<section class="panel" id="p-cronograma" role="tabpanel" data-title="Cronograma">
+  <div class="eyebrow">Cronograma</div>
+  <h2 class="big">Em uso no dia 15. Oficial no dia 30. Completa no dia 90.</h2>
+  <p class="lead">Contagem a partir da <strong>assinatura do contrato e do pagamento da entrada (Dia 0)</strong>.</p>
+  <ol class="timeline" id="timeline"></ol>
+  <p class="callout">Entregas a cada 15 dias: você acompanha a evolução e pede ajustes durante o caminho, não só no final.</p>
+</section>
+
+<!-- 7 INVESTIMENTO -->
+<section class="panel" id="p-investimento" role="tabpanel" data-title="Investimento">
+  <div class="eyebrow">Investimento</div>
+  <h2 class="big">Duas formas de contratar. Você escolhe a que combina com o seu caixa.</h2>
+
+  <div class="plans">
+    <article class="plan">
+      <span class="tag">Opção 1</span>
+      <h3>Compra da plataforma</h3>
+      <p>O cliente adquire o direito de uso <strong>perpétuo</strong> da plataforma, numa instalação exclusiva. Ela vira um ativo da empresa, que serve para todos os próximos contratos, não só este.</p>
+      <div class="price"><small>Desenvolvimento</small><b data-v="compra.desenvolvimento"></b></div>
+      <ul class="pay">
+        <li><span>Entrada na assinatura</span><b data-v="compra.entrada"></b></li>
+        <li><span>1ª parcela · dia 30</span><b data-v="compra.p1"></b></li>
+        <li><span>2ª parcela · dia 60</span><b data-v="compra.p2"></b></li>
+        <li><span>3ª parcela · dia 90</span><b data-v="compra.p3"></b></li>
+      </ul>
+      <ul class="pay pay--m">
+        <li><span>Manutenção mensal</span><b data-v="manutencaoMensal"></b></li>
+        <li><span>Servidor (VPS dedicada no Brasil)</span><b data-v="servidorMensal"></b></li>
+      </ul>
+      <div class="total"><small>Total em 12 meses</small><b data-v="compra.total12"></b><em>A partir do 2º ano: <span data-v="compra.mensalPos"></span>/mês (<span data-v="compra.ano2"></span>/ano)</em></div>
+      <p class="muted small">O código-fonte continua sendo da SyS Almeida. A cessão do código, se desejada, é cotada à parte.</p>
+    </article>
+
+    <article class="plan">
+      <span class="tag">Opção 2 · Cliente fundador</span>
+      <h3>Licença de uso</h3>
+      <p>Modelo de licença <strong>igual ao do Bitrix24</strong>: mensalidade <strong>por empresa, não por usuário</strong>, com até <span data-v="licenca.usuariosIncluidos"></span> usuários incluídos. Pagamento mensal ou anual antecipado com <span data-v="licenca.desconto"></span> de desconto.</p>
+      <div class="price"><small>Aporte de desenvolvimento</small><b data-v="licenca.aporte"></b></div>
+      <ul class="pay">
+        <li><span>Entrada na assinatura</span><b data-v="licenca.entrada"></b></li>
+        <li><span>1ª parcela · dia 30</span><b data-v="licenca.p1"></b></li>
+        <li><span>2ª parcela · dia 60</span><b data-v="licenca.p2"></b></li>
+        <li><span>3ª parcela · dia 90</span><b data-v="licenca.p3"></b></li>
+      </ul>
+      <ul class="pay pay--m">
+        <li><span>Licença</span><b data-v="licenca.licencaMensal"></b></li>
+        <li><span>Manutenção</span><b data-v="manutencaoMensal"></b></li>
+        <li><span>Servidor (VPS dedicada no Brasil)</span><b data-v="servidorMensal"></b></li>
+        <li class="sum"><span>Mensalidade</span><b data-v="licenca.mensal"></b></li>
+      </ul>
+      <div class="total"><small>Total em 12 meses</small><b data-v="licenca.total12"></b><em>Com licença anual antecipada (−<span data-v="licenca.desconto"></span>): <span data-v="licenca.total12Anual"></span></em></div>
+      <p class="muted small"><strong>Cliente fundador:</strong> mensalidade congelada por 24 meses e prioridade na fila de melhorias. A plataforma está sendo criada agora, e o aporte é o que viabiliza o desenvolvimento.</p>
+    </article>
+  </div>
+
+  <h3>Compra × Licença no tempo</h3>
+  <div class="tablewrap">
+    <table class="tbl tbl--c" id="tbl-comp"><thead><tr><th>Período</th><th>Compra</th><th>Licença</th><th>Diferença</th></tr></thead><tbody></tbody></table>
+  </div>
+  <p class="callout" id="virada"></p>
+
+  <h3>Comparativo com o Bitrix24</h3>
+  <div class="tablewrap">
+    <table class="tbl tbl--c" id="tbl-bx"><thead><tr><th></th><th>SyS Almeida</th><th>Bitrix24 Professional</th><th>Bitrix24 Enterprise</th></tr></thead><tbody></tbody></table>
+  </div>
+  <p class="muted small" id="bx-note"></p>
+
+  <div class="cols2">
+    <div class="card"><h3>Incluído</h3>
+      <ul class="checks"><li>Desenvolvimento e implantação</li><li>Treinamento</li><li>Manutenção corretiva</li><li>Backups e atualizações de segurança</li><li>Suporte por WhatsApp e e-mail em horário comercial</li><li>Melhorias quinzenais até o dia 90</li></ul></div>
+    <div class="card"><h3>Não incluído</h3>
+      <ul class="checks no"><li>Novos módulos fora do escopo da aba Funcionalidades (orçados à parte)</li><li>Integrações com sistemas de terceiros</li><li>Migração de documentos de outros sistemas</li></ul></div>
+  </div>
+  <p class="callout">Forma de pagamento: PIX ou transferência. Valores finais.</p>
+</section>
+
+<!-- 8 POR QUE -->
+<section class="panel" id="p-porque" role="tabpanel" data-title="Por que a SyS Almeida">
+  <div class="eyebrow">Por que a SyS Almeida</div>
+  <h2 class="big">Feita para o seu tipo de projeto, não adaptada.</h2>
+  <div class="grid3 why">
+    <div class="card"><i>01</i><h3>Feita para engenharia, não adaptada</h3><p>GRD, revisões e lista mestra são nativas. Ferramentas genéricas precisam de gambiarra para isso.</p></div>
+    <div class="card"><i>02</i><h3>Em uso em 15 dias, oficial em 30</h3><p>O projeto não espera a plataforma ficar pronta.</p></div>
+    <div class="card"><i>03</i><h3>A Energisa dentro da plataforma</h3><p>Os analistas comentam e aprovam no mesmo lugar, sem custo por usuário.</p></div>
+    <div class="card"><i>04</i><h3>Seus dados no Brasil</h3><p>VPS dedicada, com LGPD e nada de servidor no exterior.</p></div>
+    <div class="card"><i>05</i><h3>Preço em real, sem susto com o dólar</h3><p>Ferramentas internacionais reajustam com o câmbio. Aqui, não.</p></div>
+    <div class="card"><i>06</i><h3>Rastreabilidade total</h3><p>Toda emissão, download e aprovação fica registrada, pronta para auditoria ou fiscalização.</p></div>
+    <div class="card"><i>07</i><h3>Evolui com o seu projeto</h3><p>Entregas a cada 15 dias, e os ajustes pedidos pela sua equipe entram no ciclo.</p></div>
+    <div class="card"><i>08</i><h3>Suporte com quem construiu</h3><p>Você fala direto com o desenvolvedor, por WhatsApp, sem fila de central.</p></div>
+    <div class="card"><i>09</i><h3>Ativo para os próximos contratos</h3><p>Na compra, a plataforma serve para todas as próximas concorrências da empresa.</p></div>
+  </div>
+</section>
+
+<!-- 9 PRÓXIMOS PASSOS -->
+<section class="panel" id="p-proximos" role="tabpanel" data-title="Próximos passos">
+  <div class="eyebrow">Próximos passos</div>
+  <h2 class="big">Da escolha à plataforma em uso em 15 dias.</h2>
+  <ol class="steps">
+    <li><b>1</b><span>Escolha da opção</span></li>
+    <li><b>2</b><span>Assinatura do contrato</span></li>
+    <li><b>3</b><span>Pagamento da entrada</span></li>
+    <li><b>4</b><span>Dia 15: plataforma em uso</span></li>
+  </ol>
+  <p class="callout">Esta proposta é válida até <strong data-v="dataValidade"></strong>.</p>
+
+  <div class="contact">
+    <a class="btn btn--wa btn--xl" data-wa target="_blank" rel="noopener">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.2 16.8L2 22l5.4-1.4A11 11 0 1 0 20.5 3.5zM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-3.2.8.9-3.1-.2-.3A9 9 0 1 1 12 20zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2c-.2-.5-.4-.4-.7-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
+      Falar no WhatsApp agora
+    </a>
+    <ul class="contact__list">
+      <li><span>E-mail</span><a data-mail></a></li>
+      <li><span>Site</span><a href="https://sysalmeida.com.br" target="_blank" rel="noopener">sysalmeida.com.br</a></li>
+    </ul>
+  </div>
+
+  <div class="sign">
+    <img src="/images/logo.png" alt="SyS Almeida" width="463" height="93">
+    <p><strong data-v="contato.nome"></strong><br><span class="muted">SyS Almeida</span></p>
+  </div>
+</section>
+
+</main>
+
+<a class="wa-float" data-wa target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.2 16.8L2 22l5.4-1.4A11 11 0 1 0 20.5 3.5zM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-3.2.8.9-3.1-.2-.3A9 9 0 1 1 12 20zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2c-.2-.5-.4-.4-.7-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script src="/proposta164/dados.js"></script>
+<script src="/proposta164/proposta.js"></script>
+</body>
+</html>
