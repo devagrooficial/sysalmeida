@@ -7,7 +7,7 @@ window.PROPOSTA = {
   numero: '164',
   data: '2026-10-15',            // data de emissão (AAAA-MM-DD)
   validadeDias: 15,
-  cliente: '[NOME DA EMPRESA CLIENTE]', // <- preencher
+  cliente: 'Plataforma GED/GRD',   // aparece na capa, no campo "Projeto"
   referencia: 'Concorrência Energisa — projeto de subestação (civil e eletromecânico)',
   contato: {
     nome: 'Luis Almeida',
