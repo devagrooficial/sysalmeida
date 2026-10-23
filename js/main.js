@@ -29,7 +29,7 @@ const revealEls = document.querySelectorAll('.reveal-s');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.01, rootMargin: '0px 0px -8% 0px' });
   revealEls.forEach((el) => io.observe(el));
 } else {
   revealEls.forEach((el) => el.classList.add('in'));
@@ -84,11 +84,13 @@ document.querySelectorAll('.spot').forEach((card) => {
         }
       }
     }
+    // brilho desenhado com dois círculos (shadowBlur no canvas é caro a cada quadro)
     for (const p of pts) {
-      ctx.shadowColor = '#10e5a0'; ctx.shadowBlur = 12; ctx.fillStyle = '#7dffd3';
+      ctx.fillStyle = 'rgba(16,229,160,.18)';
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.s * 3.2, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#7dffd3';
       ctx.beginPath(); ctx.arc(p.x, p.y, p.s, 0, Math.PI * 2); ctx.fill();
     }
-    ctx.shadowBlur = 0;
     if (visible && !reduce) raf = requestAnimationFrame(draw);
   };
 

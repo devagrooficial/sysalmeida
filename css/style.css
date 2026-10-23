@@ -108,7 +108,7 @@ a { color: inherit; text-decoration: none; }
   mask-image: radial-gradient(ellipse 70% 60% at 50% 25%, #000 20%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 25%, #000 20%, transparent 75%);
 }
-.hero__glow { position: absolute; pointer-events: none; z-index: -1; border-radius: 50%; filter: blur(90px); }
+.hero__glow { position: absolute; pointer-events: none; z-index: -1; border-radius: 50%; }
 .hero__glow--top {
   top: -180px; left: 50%; width: min(900px, 100vw); height: 520px; transform: translateX(-50%);
   background: radial-gradient(closest-side, rgba(16, 229, 160, .22), transparent);
@@ -309,7 +309,7 @@ a { color: inherit; text-decoration: none; }
 .stat span { color: var(--muted); font-size: 14px; }
 .about__visual { position: relative; aspect-ratio: 1; max-width: 520px; width: 100%; margin-inline: auto; }
 .about__visual canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-.about__glow { position: absolute; inset: 15%; border-radius: 50%; background: radial-gradient(closest-side, rgba(16, 229, 160, .22), transparent); filter: blur(40px); }
+.about__glow { position: absolute; inset: 15%; border-radius: 50%; background: radial-gradient(closest-side, rgba(16, 229, 160, .22), transparent);  }
 
 /* ---------- Bento ---------- */
 .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
@@ -384,7 +384,9 @@ a { color: inherit; text-decoration: none; }
 .contact { padding-bottom: 140px; overflow-x: clip; }
 .contact__glow { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(ellipse 70% 60% at 50% 55%, rgba(16, 229, 160, .12), rgba(5, 40, 30, .08) 45%, transparent 75%); }
 .contact__grid { display: block; max-width: 560px; margin: 10px auto 0; text-align: center; }
-.btn--xl { width: 100%; padding: 22px 28px; font-size: 18px; border-radius: 12px; animation: glowpulse 3s ease-in-out infinite; }
+.btn--xl { position: relative; width: 100%; padding: 22px 28px; font-size: 18px; border-radius: 12px; }
+.btn--xl::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: 0 0 40px 2px rgba(16, 229, 160, .45); opacity: 0; animation: glowfade 3s ease-in-out infinite; pointer-events: none; }
+@keyframes glowfade { 50% { opacity: 1; } }
 @keyframes glowpulse { 50% { box-shadow: 0 0 40px 2px rgba(16, 229, 160, .45), inset 0 1px 0 rgba(255, 255, 255, .35); } }
 .contact__info { list-style: none; padding: 0; margin: 40px 0 0; display: grid; gap: 22px; }
 .contact__info li { display: grid; justify-items: center; gap: 8px; padding-top: 22px; border-top: 1px solid var(--border); }
@@ -475,7 +477,7 @@ a { color: inherit; text-decoration: none; }
 }
 .pcard::before { /* brilho da cor do produto */
   content: ""; position: absolute; z-index: -1; right: -10%; bottom: -35%; width: 75%; height: 120%;
-  background: radial-gradient(closest-side, rgba(var(--c-rgb), .22), transparent 70%); filter: blur(40px); pointer-events: none;
+  background: radial-gradient(closest-side, rgba(var(--c-rgb), .2), transparent 75%); pointer-events: none;
 }
 .pcard::after { /* fio de cor no topo */
   content: ""; position: absolute; z-index: -1; left: 0; right: 0; top: 0; height: 2px;
@@ -713,4 +715,13 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 400px) {
   .header .btn--sm { padding: 9px 11px; font-size: 12.5px; }
   .burger { margin-right: 8px; width: 38px; height: 38px; }
+}
+
+/* ---------- Desempenho ---------- */
+/* No celular: sem flutuação contínua e sem reflexo animado (economiza bateria e deixa a rolagem lisa) */
+@media (max-width: 900px), (hover: none) {
+  .dev, .float, .metal { animation: none !important; }
+  .pcard:hover .dev, .cs:hover .dev--phone, .pcard:hover .dev--phone { transform: none; }
+  .header__inner, .badge, .float { backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .header__inner { background: rgba(12,12,12,.92); }
 }
