@@ -100,3 +100,24 @@ document.querySelectorAll('.spot').forEach((card) => {
     if (visible) draw();
   }).observe(canvas);
 })();
+
+// Contagem animada dos números do case (respeita "reduzir movimento")
+(function counters() {
+  const els = document.querySelectorAll('[data-count]');
+  if (!els.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  const fmt = new Intl.NumberFormat('pt-BR');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      const el = e.target, end = +el.dataset.count, t0 = performance.now(), dur = 1400;
+      const step = (t) => {
+        const p = Math.min(1, (t - t0) / dur), v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+        el.textContent = fmt.format(v);
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }, { threshold: 0.5 });
+  els.forEach((el) => io.observe(el));
+})();
