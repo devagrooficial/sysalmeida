@@ -17,7 +17,10 @@
   <header class="header is-scrolled" id="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo" aria-label="SyS Almeida — página inicial"><img src="images/logo.png" alt="SyS Almeida" width="463" height="93"></a>
-      <nav class="nav" aria-label="Principal">
+      <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Principal">
         <a href="index.html#produtos">Produtos</a>
         <a href="index.html#sobre">Empresa</a>
         <a href="index.html#servicos">Serviços</a>
@@ -113,6 +116,7 @@
       <p>Copyright © 2026 SyS Almeida</p>
     </div>
   </footer>
+  <script src="js/menu.js"></script>
   <script src="js/cookies.js"></script>
 </body>
 </html>

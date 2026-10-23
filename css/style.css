@@ -680,3 +680,37 @@ a { color: inherit; text-decoration: none; }
   .src { padding: 14px 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .srcmap__wires path { animation: none; } }
+
+/* ---------- Menu sanduíche (celular) ---------- */
+.burger { display: none; }
+@media (max-width: 860px) {
+  .header__inner { grid-template-columns: auto auto 1fr; position: relative; }
+  .header .btn { grid-column: 3; }
+  .burger {
+    display: inline-grid; place-content: center; gap: 5px; width: 40px; height: 40px; margin-left: 10px;
+    border-radius: 10px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.04); cursor: pointer;
+    transition: border-color .2s, background .2s;
+  }
+  .burger:hover, .header.menu-open .burger { border-color: rgba(16,229,160,.5); background: rgba(16,229,160,.08); }
+  .burger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .burger span { display: block; width: 18px; height: 2px; border-radius: 2px; background: #fff; transition: transform .3s ease, opacity .2s ease; }
+  .header.menu-open .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .header.menu-open .burger span:nth-child(2) { opacity: 0; }
+  .header.menu-open .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .header .nav {
+    display: flex; flex-direction: column; gap: 2px;
+    position: absolute; left: 0; right: 0; top: calc(100% + 8px);
+    padding: 10px; border-radius: 14px;
+    background: #0d0d0d;
+    border: 1px solid rgba(255,255,255,.12); box-shadow: 0 24px 60px -20px #000;
+    opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  .header.menu-open .nav { opacity: 1; visibility: visible; transform: none; }
+  .header .nav a { padding: 14px 16px; border-radius: 10px; font-size: 16px; color: #d6d6d6; }
+  .header .nav a:hover, .header .nav a:focus-visible { background: rgba(16,229,160,.08); color: #fff; }
+}
+@media (max-width: 400px) {
+  .header .btn--sm { padding: 9px 11px; font-size: 12.5px; }
+  .burger { margin-left: 8px; width: 38px; height: 38px; }
+}
