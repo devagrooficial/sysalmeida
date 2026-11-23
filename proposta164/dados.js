@@ -12,7 +12,7 @@ window.PROPOSTA = {
   contato: {
     nome: 'Luis Almeida',
     email: 'contato@sysalmeida.com.br',
-    whatsapp: '5565998007684',   // mesmo número usado no site
+    whatsapp: '5565999497894',   // mesmo número usado no site
   },
   manutencaoMensal: 850,
   servidorMensal: 650,           // VPS dedicada no Brasil
